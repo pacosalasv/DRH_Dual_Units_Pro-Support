@@ -1,0 +1,73 @@
+name: Marketplace / report problem
+description: Report a store, listing, package, or update delivery problem related to the add-on.
+title: "[Marketplace]: "
+labels:
+  - marketplace problem
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for marketplace, listing, package delivery, or update distribution problems related to DRH - Add-ons Audit.
+
+  - type: input
+    id: marketplace_name
+    attributes:
+      label: Marketplace or store name
+      placeholder: "Example: BlenderKit, Gumroad, Blender Market"
+    validations:
+      required: true
+
+  - type: input
+    id: product_version
+    attributes:
+      label: Product or version affected
+      placeholder: "Example: DRH - Add-ons Audit 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_summary
+    attributes:
+      label: Problem summary
+      description: Briefly describe the marketplace or delivery problem.
+      placeholder: "Example: The latest update is not available in my library."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: What did you expect?
+      description: Describe the expected result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: What happened instead?
+      description: Describe the actual result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot_or_evidence
+    attributes:
+      label: Screenshot or evidence
+      description: Attach screenshots or paste any relevant details, without sharing private payment information.
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional notes
+      description: Add any other useful context.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed or redacted any private payment or account information.
+          required: true
+        - label: I searched existing issues before opening this report.
+          required: true

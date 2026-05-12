@@ -1,0 +1,65 @@
+name: Feature request
+description: Suggest an improvement or new feature for DRH - Add-ons Audit.
+title: "[Feature]: "
+labels:
+  - feature request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement for DRH - Add-ons Audit.
+
+        Please describe the problem and the value of the proposed feature.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What problem, friction point, or limitation are you trying to solve?
+      placeholder: "Describe the current pain point."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen?
+      placeholder: "Describe the feature or workflow improvement you want."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Did you try any workaround or alternative approach?
+      placeholder: "Describe any workaround, alternative workflow, or similar idea."
+    validations:
+      required: false
+
+  - type: textarea
+    id: workflow_benefit
+    attributes:
+      label: Workflow benefit
+      description: How would this improve usability, speed, clarity, or reporting?
+      placeholder: "Explain the practical benefit."
+    validations:
+      required: true
+
+  - type: textarea
+    id: example_use_case
+    attributes:
+      label: Example use case
+      description: Share a real scenario where this feature would help.
+      placeholder: "Describe your workflow or project context."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and discussions before opening this request.
+          required: true

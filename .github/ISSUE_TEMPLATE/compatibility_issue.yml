@@ -1,0 +1,97 @@
+name: Compatibility issue
+description: Report a Blender version or platform compatibility problem.
+title: "[Compatibility]: "
+labels:
+  - compatibility issue
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a compatibility issue.
+
+        Use this form for Blender version differences, platform-specific failures, or behavior that appears tied to environment compatibility.
+
+  - type: input
+    id: addon_version
+    attributes:
+      label: Add-on version
+      placeholder: "Example: 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: blender_version
+    attributes:
+      label: Blender version
+      placeholder: "Example: 4.2.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: installation_method
+    attributes:
+      label: Installation method
+      options:
+        - Blender Preferences > Add-ons > Install from Disk
+        - Marketplace download
+        - Manual ZIP install
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_works
+    attributes:
+      label: What works
+      description: Describe what works normally, if anything.
+      placeholder: "Example: The add-on installs, the panel appears, export works."
+
+  - type: textarea
+    id: what_fails
+    attributes:
+      label: What fails
+      description: Describe the compatibility problem clearly.
+      placeholder: "Example: The panel does not load, buttons fail, or export crashes."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro_steps
+    attributes:
+      label: Reproducible steps
+      description: List the exact steps needed to reproduce the issue.
+      placeholder: |
+        1. Open Blender
+        2. Enable the add-on
+        3. Open ...
+        4. Trigger ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Error message or screenshot
+      description: Paste any error, traceback, or attach screenshots if available.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and discussions before opening this report.
+          required: true
+        - label: I believe this issue is related to version or platform compatibility.
+          required: true
